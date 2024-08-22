@@ -1,0 +1,54 @@
+#include<stdio.h>
+void main()
+{ 
+ int i=0,n,j,small,temp,a[100],time=0;
+ time=time+2;
+ printf("enter the number of elements:");
+ time++;
+ scanf("%d",&n);
+ time++;
+ printf("Enter the elements");
+ time++;
+ time++;
+ for(i=0;i<n;i++)
+ {
+ time++;
+  scanf("%d",&a[i]);
+  }
+  time++; 
+  for(i=0;i<n-1;i++)
+  {
+   small=i;
+   time++; 
+   for(j=i+1;j<n;j++)
+ {
+   time++;
+   if(a[small]>a[j])
+ {
+  small=j;
+ }}
+ time++;
+ if(small!=i)
+ {
+  temp=a[i];
+  a[i]=a[small];
+  a[small]=temp;
+  }
+  }
+  printf("sorted list\n");
+  time++;
+  time++;
+  for(i=0;i<n;i++)
+  {
+  printf("%d\t",a[i]);
+  time++;
+  }
+  printf("\n");
+  time++;
+  printf("\nspace complexity=%d",(n*4)+(5*4));
+  time++;
+  printf("\ntime complexity=%d",time+1);
+  }
+ 
+   
+ 
